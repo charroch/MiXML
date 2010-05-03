@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<result>
+    <status>0</status>
+    <statusMessage></statusMessage>
+    <secopen>n</secopen>
+    <vVideourl>
+        <vVideourl_item></vVideourl_item>
+        <vVideourl_item></vVideourl_item>
+        <vVideourl_item>http://rf10.lbi.dk/mobil/video/motorhead_7.mp4</vVideourl_item>
+    </vVideourl>
+    <vVideoname>
+        <vVideoname_item>Karen by Simonsen show</vVideoname_item>
+        <vVideoname_item>M&#246;torhead&#13;Interview</vVideoname_item>
+        <vVideoname_item>Mot&#246;rhead Whorehouse Blues</vVideoname_item>
+    </vVideoname>
+    <vVideoinfo>
+        <vVideoinfo_item>Show at Copenhagen Fashion Week 2010</vVideoinfo_item>
+        <vVideoinfo_item>Interview with&#13;Full Metal Jackie</vVideoinfo_item>
+        <vVideoinfo_item>Whorehouse Blues from the album: Inferno (c)2004 SPV / Steamhammer</vVideoinfo_item>
+    </vVideoinfo>
+</result>

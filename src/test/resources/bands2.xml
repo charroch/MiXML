@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<result>
+    <status>0</status>
+    <statusMessage></statusMessage>
+    <secopen>y</secopen>
+    <bIDs>
+        <bIDs_item>200</bIDs_item>
+        <bIDs_item>291</bIDs_item>
+        <bIDs_item>201</bIDs_item>
+        <bIDs_item>299</bIDs_item>
+        <bIDs_item>298</bIDs_item>
+        <bIDs_item>309</bIDs_item>
+    </bIDs>
+    <bNames>
+        <bNames_item>AFENGINN (DK)</bNames_item>
+        <bNames_item>MATIAS AGUAYO (CHL)</bNames_item>
+        <bNames_item>ALICE IN CHAINS (US)</bNames_item>
+        <bNames_item>ANALOG AFRICA SOUNDSYSTEM (DE)</bNames_item>
+        <bNames_item>ARRIBA LA CUMBIA (UK)</bNames_item>
+        <bNames_item>THE ASTEROIDS GALAXY TOUR (DK)</bNames_item>
+    </bNames>
+    <startletter>A</startletter>
+</result>

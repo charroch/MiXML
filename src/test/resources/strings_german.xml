@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string
+		name="oauth_login_failed">falsche Eingabe</string>
+	<string
+		name="hello">Hello World, Settings!</string>
+	<string
+		name="app_name">Xing</string>
+	<string
+		name="eula_title">Nutzervereinbarung</string>
+
+	<string
+		name="btn_accept">OK</string>
+	<string
+		name="btn_decline">Abgelehnt</string>
+	<string
+		name="btn_cancel">Abgelehnt</string>
+
+	<string
+		name="logged_in_as">Angemeldet als</string>
+	<string
+		name="not_logged_in">Nicht angemeldet</string>
+	<string
+		name="register_account">Kontoinformation registrieren</string>
+	<string
+		name="pref_only_friends_summary">Statusaenderungen nur sichtbar fuer Freunde?</string>
+	<string
+		name="pref_only_friends_title">Statusaenderungen sichtbar</string>
+
+
+	<!--  status update -->
+	<string
+		name="unauthorized">Sie sind nicht autorisiert um diese Aktion durchzufuehren
+	</string>
+	<string
+		name="payment_required">Sie brauchen ein aktualisiertes Konto um diese Aktion
+		durchzufuehren</string>
+	<string
+		name="unknown_server_error">Unknown server error, please try again later</string>
+
+
+	<!-- Login pref -->
+	<string
+		name="pref_delete_account_message">Sind sie sicher, dass sie Ihr Konto loeschen wollen?</string>
+	<string
+		name="pref_delete">Konto loeschen</string>
+	<string
+		name="pref_login">Anmeldung</string>
+	<string
+		name="pref_login_title">Kontoinformationen eingeben</string>
+	<string
+		name="pref_login_email">Email</string>
+	<string
+		name="pref_login_password">Password</string>
+	<string
+		name="pref_login_create_new">Neu anlegen</string>
+	<string
+		name="pref_login_sign_in">Anmelden</string>
+	<string
+		name="pref_login_cancel">Loeschen</string>
+
+	<!-- login progress -->
+	<string
+		name="dialog_auth_message">Authorisation in progress...</string>
+		
+		
+	<string-array
+		name="sync_interval_values">
+		<item>Niemals</item>
+        <item>Alle 15 Minuten</item>
+        <item>Alle 30 Minuten</item>
+        <item>Einmal pro Stunde</item>
+        <item>Alle drei Stunden</item>
+	</string-array>
+</resources>

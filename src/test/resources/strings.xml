@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string
+		name="oauth_login_failed">Something went wrong</string>
+	<string
+		name="hello">Hello World, Settings!</string>
+	<string
+		name="app_name">Xing</string>
+	<string
+		name="eula_title">End user agreement</string>
+
+	<string
+		name="btn_accept">OK</string>
+	<string
+		name="btn_decline">Decline</string>
+	<string
+		name="btn_cancel">Cancel</string>
+
+	<string
+		name="logged_in_as">Logged in as</string>
+	<string
+		name="not_logged_in">Not logged in</string>
+	<string
+		name="register_account">Register your account information</string>
+	<string
+		name="pref_only_friends_summary">Make status update only visible to contacts?</string>
+	<string
+		name="pref_only_friends_title">Status update visibility</string>
+
+
+	<!--  status update -->
+	<string
+		name="unauthorized">You are not authorised to perform this action</string>
+	<string
+		name="payment_required">You need an upgraded account to perform this action</string>
+	<string
+		name="unknown_server_error">Unknown server error, please try again later</string>
+
+
+	<!-- Login pref -->
+	<string
+		name="pref_delete_account_message">Are you sure you want to delete your account?</string>
+	<string
+		name="pref_delete">Delete account</string>
+	<string
+		name="pref_login">Login</string>
+	<string
+		name="pref_login_title">Enter account information</string>
+	<string
+		name="pref_login_email">Email</string>
+	<string
+		name="pref_login_password">Password</string>
+	<string
+		name="pref_login_create_new">Create new</string>
+	<string
+		name="pref_login_sign_in">Sign in</string>
+	<string
+		name="pref_login_cancel">Cancel</string>
+
+	<!-- login progress -->
+	<string
+		name="dialog_auth_message">Authorisation in progress...</string>
+
+</resources>

@@ -30,7 +30,8 @@ public class XMLNodeTest {
     @Before
     public void setUp() throws Exception {
         xmlnode = new XMLNode();
-        File file = new File("/tmp/artist.xml");
+        
+        File file = new File("src/test/resources/artist.xml");
         in = new FileInputStream(file);
     }
 
@@ -47,14 +48,14 @@ public class XMLNodeTest {
 
     @Test
     public void testTableIndex() throws Exception {
-        File file = new File("/tmp/bands2.xml");
+        File file = new File("src/test/resources/bands2.xml");
         xmlnode.parse(new FileInputStream(file));
         assertEquals(201, xmlnode.path("result").path("bIDs").get(2).getAsInt());
     }
     
     @Test
     public void testSizeOfArray() throws Exception {
-        File file = new File("/tmp/bands2.xml");
+        File file = new File("src/test/resources/bands2.xml");
         xmlnode.parse(new FileInputStream(file));
         assertEquals(6, xmlnode.path("result").path("bIDs").size());
     }
@@ -68,7 +69,7 @@ public class XMLNodeTest {
     
     @Test
     public void testgetaslist() throws Exception {
-        File file = new File("/tmp/bandspage.xml");
+        File file = new File("src/test/resources/bandspage.xml");
         xmlnode.parse(new FileInputStream(file));
         List<String> l = xmlnode.path("result").path("bLetters").getAsList();
         assertEquals(l.get(2), "C");
@@ -76,7 +77,7 @@ public class XMLNodeTest {
     
     @Test
     public void testNullValue() throws Exception {
-        File file = new File("/tmp/video.xml");
+        File file = new File("src/test/resources/video.xml");
         xmlnode.parse(new FileInputStream(file));
         List<String> l = xmlnode.path("result").path("vVideoname").getAsList();
         assertEquals(xmlnode.path("result").path("vVideourl").size(), 3);
