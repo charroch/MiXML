@@ -3,6 +3,8 @@ package novoda.mixml;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.FactoryConfigurationError;
@@ -22,18 +24,33 @@ public class XMLNode {
     public XMLNode() {
     }
 
-    void parse(InputStream in) throws SAXException, IOException, ParserConfigurationException,
-            FactoryConfigurationError {
+    public void parse(InputStream in) throws SAXException, IOException,
+            ParserConfigurationException, FactoryConfigurationError {
         doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(in);
         current = doc.getDocumentElement();
     }
 
     public XMLNode get(int index) {
         if (current.hasChildNodes()) {
-            current = current.getChildNodes().item(index * 2 + 1);
-            return this;
+            return recurse(current.getChildNodes().item(index * 2 + 1));
         }
         return new EmptyNode();
+    }
+
+    public List<String> getAsList() {
+        if (current.hasChildNodes()) {
+            List<String> ret = new ArrayList<String>(size());
+            for (int i = 0; i < size(); i++) {
+                Node node = current.getChildNodes().item(i * 2 + 1).getFirstChild();
+                if (node != null) {
+                    ret.add(node.getNodeValue());
+                } else {
+                    ret.add("");
+                }
+            }
+            return ret;
+        }
+        return null;
     }
 
     public XMLNode path(String name) {
@@ -45,22 +62,27 @@ public class XMLNode {
         NodeList list = current.getChildNodes();
         for (int i = 0; i < list.getLength(); i++) {
             if (list.item(i).getNodeName().equals(name)) {
-                current = list.item(i);
-                return this;
+                return recurse(list.item(i));
             }
         }
         return new EmptyNode();
     }
 
     public String getAsString() {
-        return current.getTextContent();
+        return current.getFirstChild().getNodeValue();
     }
 
     public int getAsInt() {
-        return Integer.parseInt(current.getTextContent());
+        return Integer.parseInt(current.getFirstChild().getNodeValue());
     }
 
     public int size() {
         return (current.getChildNodes().getLength() / 2);
+    }
+
+    private XMLNode recurse(Node current) {
+        XMLNode clone = new XMLNode();
+        clone.current = current;
+        return clone;
     }
 }
