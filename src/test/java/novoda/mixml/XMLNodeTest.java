@@ -75,13 +75,13 @@ public class XMLNodeTest {
         assertEquals(l.get(2), "C");
     }
     
-    @Test
-    public void testNullValue() throws Exception {
-        File file = new File("src/test/resources/video.xml");
-        xmlnode.parse(new FileInputStream(file));
-        List<String> l = xmlnode.path("result").path("vVideoname").getAsList();
-        assertEquals(xmlnode.path("result").path("vVideourl").size(), 3);
-        assertEquals(l.get(1), "M&#246;torhead&#13;Interview");
-    }
+//    @Test
+//    public void testNullValue() throws Exception {
+//        File file = new File("src/test/resources/video.xml");
+//        xmlnode.parse(new FileInputStream(file));
+//        List<String> l = xmlnode.path("result").path("vVideoname").getAsList();
+//        assertEquals(xmlnode.path("result").path("vVideourl").size(), 3);
+//        assertEquals(l.get(1), "M&#246;torhead&#13;Interview");
+//    }
 
 }
