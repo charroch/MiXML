@@ -1,0 +1,28 @@
+<response>
+    <status>0</status>
+    <statusMessage></statusMessage>
+    <pageCaption>Main Page</pageCaption>
+    <optionsList>
+        <optionsList_item>
+            <action>3</action>
+            <headline>SHOW SCHEDULE</headline>
+            <subtext>Plan your front row appearances.</subtext>
+            <iconUrl>http://cfw.lbi.dk/mobil/touch/ral/icon_test_2.jpg</iconUrl>
+            <searchString>shows</searchString>
+        </optionsList_item>
+        <optionsList_item>
+            <action>3</action>
+            <headline>EVENT SCHEDULE</headline>
+            <subtext>Get down with fashion week's wealth of exclusive events.</subtext>
+            <iconUrl>http://cfw.lbi.dk/mobil/touch/ral/icon_test_2.jpg</iconUrl>
+            <searchString>events</searchString>
+        </optionsList_item>
+        <optionsList_item>
+            <action>69</action>
+            <headline>TRADE FAIRS</headline>
+            <subtext>Plan your moves with the trade fair guide.</subtext>
+            <iconUrl>http://cfw.lbi.dk/mobil/touch/ral/icon_test_2.jpg</iconUrl>
+            <searchString></searchString>
+        </optionsList_item>
+    </optionsList>
+</response>

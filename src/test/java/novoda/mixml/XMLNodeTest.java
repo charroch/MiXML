@@ -1,11 +1,12 @@
 
 package novoda.mixml;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.List;
+import java.util.Map;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -75,13 +76,21 @@ public class XMLNodeTest {
         assertEquals(l.get(2), "C");
     }
     
-//    @Test
-//    public void testNullValue() throws Exception {
-//        File file = new File("src/test/resources/video.xml");
-//        xmlnode.parse(new FileInputStream(file));
-//        List<String> l = xmlnode.path("result").path("vVideoname").getAsList();
-//        assertEquals(xmlnode.path("result").path("vVideourl").size(), 3);
-//        assertEquals(l.get(1), "M&#246;torhead&#13;Interview");
-//    }
+    @Test
+    public void testGetObjectListName() throws Exception {
+        File file = new File("src/test/resources/list.xml");
+        xmlnode.parse(new FileInputStream(file));
+        Map<String, String> names = xmlnode.path("response").path("optionsList").path("optionsList_item").getAsMap();
+        assertEquals(names.get("action"), "3");
+    }
+    
+    @Test
+    public void testGetListOfObjects() throws Exception {
+    	File file = new File("src/test/resources/list.xml");
+        xmlnode.parse(new FileInputStream(file));
+        List<XMLNode> names = xmlnode.path("response").path("optionsList").getAsList("optionsList_item");
+        assertEquals(names.get(0).path("action").getAsString(), "3");
+        assertEquals(names.get(1).path("headline").getAsString(), "EVENT SCHEDULE");
+    }
 
 }
