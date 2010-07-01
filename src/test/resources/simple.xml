@@ -1,0 +1,15 @@
+<response>
+    <status>0</status>
+    <msg>message</msg>
+    <boolean>true</boolean>
+    <array>
+        <array_item>
+            <string>string</string>
+            <integer>1</integer>
+        </array_item>
+        <array_item>
+            <string>another</string>
+            <integer>2</integer>
+        </array_item>
+    </array>
+</response>

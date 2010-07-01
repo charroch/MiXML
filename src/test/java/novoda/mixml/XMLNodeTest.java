@@ -92,5 +92,14 @@ public class XMLNodeTest {
         assertEquals(names.get(0).path("action").getAsString(), "3");
         assertEquals(names.get(1).path("headline").getAsString(), "EVENT SCHEDULE");
     }
+    
+   // @Test
+    public void testSimpleXPath() throws Exception {
+        File file = new File("src/test/resources/list.xml");
+        xmlnode.parse(new FileInputStream(file));
+        List<XMLNode> names = xmlnode.path("response/optionsList").getAsList("optionsList_item");
+        assertEquals(names.get(0).path("action").getAsString(), "3");
+        assertEquals(names.get(1).path("headline").getAsString(), "EVENT SCHEDULE");   
+    }
 
 }

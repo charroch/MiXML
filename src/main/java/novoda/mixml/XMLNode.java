@@ -77,6 +77,10 @@ public class XMLNode {
 	public int getAsInt() {
 		return Integer.parseInt(current.getFirstChild().getNodeValue());
 	}
+	
+    public double getAsDouble() {
+        return Double.parseDouble(current.getFirstChild().getNodeValue());
+    }
 
 	public int size() {
 		return (current.getChildNodes().getLength() / 2);
@@ -114,4 +118,17 @@ public class XMLNode {
 		}
 		return ret;
 	}
+
+    public float getAsFloat() {
+        return Float.parseFloat(current.getFirstChild().getNodeValue());
+    }
+
+    public long getAsLong() {
+        return Long.parseLong(current.getFirstChild().getNodeValue());
+    }
+
+    public short getAsShort() {
+        return Short.parseShort(current.getFirstChild().getNodeValue());
+    }
+
 }
