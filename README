@@ -1,0 +1,3 @@
+Minimal parser for Android which uses a synthax similar to Jackson parser:
+
+node.path("xmlnode").getAsSting();
