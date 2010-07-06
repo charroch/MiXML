@@ -11,9 +11,9 @@
 	<name>MiXML</name>
 	<description>Minimal XML parsing and traversing</description>
 	<scm>
-		<connection>scm:git:git://git@github.com/charroch/MiXML.git</connection>
-		<developerConnection>scm:git:git://git@github.com/charroch/MiXML.git</developerConnection>
-		<url>scm:git:git://git@github.com/charroch/MiXML.git</url>
+		<connection>scm:git:git://github.com/charroch/MiXML.git</connection>
+		<developerConnection>scm:git:git://github.com/charroch/MiXML.git</developerConnection>
+		<url>scm:git:git://github.com/charroch/MiXML.git</url>
 	</scm>
 	<build>
 		<plugins>
