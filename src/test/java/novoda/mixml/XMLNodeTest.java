@@ -1,6 +1,7 @@
 
 package novoda.mixml;
 
+import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 
 import java.io.File;
@@ -85,6 +86,14 @@ public class XMLNodeTest {
     }
     
     @Test
+    public void testSizeChildren() throws Exception {
+        File file = new File("src/test/resources/list.xml");
+        xmlnode.parse(new FileInputStream(file));
+        int size = xmlnode.path("response").path("optionsList").size();
+        assertEquals(size, 3);
+    }
+    
+    @Test
     public void testGetListOfObjects() throws Exception {
     	File file = new File("src/test/resources/list.xml");
         xmlnode.parse(new FileInputStream(file));
@@ -101,5 +110,12 @@ public class XMLNodeTest {
         assertEquals(names.get(0).path("action").getAsString(), "3");
         assertEquals(names.get(1).path("headline").getAsString(), "EVENT SCHEDULE");   
     }
-
+    
+    @Test
+    public void testIsArray() throws Exception {
+        File file = new File("src/test/resources/bands2.xml");
+        xmlnode.parse(new FileInputStream(file));
+        assertTrue(xmlnode.path("result").path("bIDs").isArray());
+        assertFalse(xmlnode.path("result").isArray());
+    }
 }
