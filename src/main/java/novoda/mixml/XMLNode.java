@@ -34,7 +34,7 @@ public class XMLNode implements Serializable {
 
     public void parse(InputStream in) throws SAXException, IOException,
             ParserConfigurationException, FactoryConfigurationError {
-        doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(in);
+        doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(in, "UTF-8");
         current = doc.getDocumentElement();
     }
 
@@ -76,6 +76,15 @@ public class XMLNode implements Serializable {
     }
 
     public String getAsString() {
+        if (current.hasChildNodes()) {
+            NodeList list = current.getChildNodes();
+            StringBuffer b = new StringBuffer();
+            for (int i = 0; i <  list.getLength(); i++) {
+                Node l = list.item(i);
+                b.append(l.getNodeValue());
+            }
+            return b.toString();
+        }
         return current.getFirstChild().getNodeValue();
     }
 
